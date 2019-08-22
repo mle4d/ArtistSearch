@@ -5,7 +5,5 @@ export const searchArtist = (id) => {
       artists: json.artists,
       count: json.count,
       offset: json.offset
-    }));
-      
+    }));   
 };
-

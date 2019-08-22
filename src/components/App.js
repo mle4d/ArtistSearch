@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Search from './Search';
 import { 
   BrowserRouter as Router, 
-  Route 
-} from 'react-router-dom';
+  Route } from 'react-router-dom';
 
-function Home() {
-  return <h1>Home</h1>;
-}
 
-export default function App() {
-  return (
-    <Router>
-      <Route path="/home" component={Home} />
-    </Router>
-  );
-}
-  
+export default class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Route exact path="/" component={Search} />
+      </Router>
+    );
+  }
+} 

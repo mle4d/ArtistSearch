@@ -14,7 +14,6 @@ fetchArtist = () => {
       });
     });
 }
-
 render() {
   return (
     <section>
@@ -24,11 +23,10 @@ render() {
 }
 }
 Artist.propTypes = {
-  match: propTypes.shape({
+  match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string.isRequired
     })
   })
 };
-
 
