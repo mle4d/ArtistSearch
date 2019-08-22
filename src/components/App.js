@@ -1,7 +1,7 @@
 import React from 'react';
-import {
-  BrowserRouter as Router
-  Route
+import { 
+  BrowserRouter as Router, 
+  Route 
 } from 'react-router-dom';
 
 function Home() {
@@ -10,9 +10,9 @@ function Home() {
 
 export default function App() {
   return (
-<Router>
-  <Route path="/home" component={Home} />
-</Router>
-  )
+    <Router>
+      <Route path="/home" component={Home} />
+    </Router>
+  );
 }
   
