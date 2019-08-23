@@ -11,7 +11,7 @@ function Search({ artist, input, search }) {
           <p>Get the scoop here!</p>
             <form onSubmit={search}>
               <input placeholder="type here" type="text" name="artist" value={artist} onChange={input}></input>
-              <button onClick={search}>Search</button>
+              <button>Search</button>
             </form>
           
           </>

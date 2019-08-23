@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Artist from './Artist';
 
 
 function Artists({ artists }) {
   const artistInfo = artists.map(artist => (
     <li key={artist.id}>
-      <Artist {...artist}/>
+      <Artist {...artist} />
     </li>
   ));
 
@@ -14,10 +16,9 @@ function Artists({ artists }) {
 }
 
 Artists.propTypes = {
-  artist: PropTypes.arrayOf(PropTypes.shape({
+  artists: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-
   })).isRequired
 };
 
