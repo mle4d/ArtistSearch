@@ -1,0 +1,36 @@
+
+header {
+  background-color: #ffecb8;
+  border-radius: 8px;
+  margin: auto;
+  width: 70vw;
+}
+h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 8vw;
+  color:#90d2d8;
+}
+h2 {
+  text-align: center;
+  color: #f6a6b2;
+  margin: auto;
+}
+section {
+  margin: auto;
+  background-color: #ffecb8;
+  width: 65vw;
+  height: 20vh;
+  border-radius: 12px;
+  margin-top: 140px;
+}
+input {
+  display: center;
+  border-radius: 8px;
+  width: 55vw;
+  margin-top: 80px;
+}
+button {
+  width: 80px;
+  border-radius: 8px;
+}

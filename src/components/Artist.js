@@ -1,32 +1,23 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { searchArtist } from '../services/musicAPI';
 
-export default class Artist extends PureComponent {
- state = {
-   artist: ''
- }
-fetchArtist = () => {
-  searchArtist(this.props.match.params.id)
-    .then(res => {
-      this.setState({
-        artist: res.artist
-      });
-    });
-}
-render() {
+
+function Artist({ artist }){
   return (
-    <section>
-      <h2>{this.state.artist}</h2>
-    </section>
+    <Link to={`/artist/${artist.name}/${artist.id}`}>
+      <section>
+        <h2>{artist.name}</h2>
+      </section>
+    </Link>
   );
 }
-}
+
 Artist.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired
-    })
+  artist: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    disambiguation: PropTypes.string.isRequired,
+    id: PropTypes.id
   })
 };
 
+export default Artist;
