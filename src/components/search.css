@@ -1,36 +1,36 @@
 
 header {
   background-color: #ffecb8;
-  border-radius: 8px;
-  margin: auto;
-  width: 70vw;
+  border-radius: 300px;
+  width: 300px;
+  height: 300px;
 }
 h1 {
   text-align: center;
-  margin: auto;
-  font-size: 8vw;
+  font-size: 6vw;
   color:#90d2d8;
 }
 h2 {
   text-align: center;
   color: #f6a6b2;
-  margin: auto;
 }
 section {
   margin: auto;
   background-color: #ffecb8;
-  width: 65vw;
-  height: 20vh;
-  border-radius: 12px;
-  margin-top: 140px;
-}
-input {
-  display: center;
-  border-radius: 8px;
-  width: 55vw;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
   margin-top: 80px;
 }
+
+input {
+  border-radius: 8px;
+  width: 100px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
 button {
+  margin-left: 60px;
   width: 80px;
   border-radius: 8px;
 }

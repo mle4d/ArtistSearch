@@ -32,7 +32,7 @@ export default class Search extends PureComponent {
     return (
         <>
         <header>
-          <h1>Musician-Magician</h1>
+          <h1>Music Scoops</h1>
           <h2>Make any artist appear!</h2>
         </header>
           <section>
