@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Search from './Search';
-import Artist from './Artist';
 import { 
   BrowserRouter as Router, 
   Route } from 'react-router-dom';

@@ -1,12 +1,17 @@
 body {
-  margin: auto;
+  background: url(http://myzeroone.com/myzeroone/16437-cartoon-ice-cream-wallpaper.jpg);
+  background-size: 650px;
+  background-repeat: no-repeat;
+  background-color: #b0e6e4;
+  background-position: left bottom;
   width: 100vw;
-  background-color: #b7ded2;
 }
 div {
-  margin: auto;
+  margin-top: -15px;
+  margin-left: 350px;
   width: 600px;
   height: 600px;
   background-color: pink;
   border-radius: 300px;
+  border: 10px dotted #b0e6e4;
 }
