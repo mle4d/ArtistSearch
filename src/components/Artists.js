@@ -4,14 +4,14 @@ import Artist from './Artist';
 
 
 function Artists({ artists }) {
-  const artistInfo = artists.map(artist => (
+  const artistList = artists.map(artist => (
     <li key={artist.id}>
-      <Artist {...artist} />
+      <Artist artist={artist} />
     </li>
   ));
 
   return (
-    <ul>{artistInfo}</ul>
+    <ul>{artistList}</ul>
   );
 }
 
@@ -23,3 +23,4 @@ Artists.propTypes = {
 };
 
 export default Artists;
+

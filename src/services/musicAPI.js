@@ -9,10 +9,27 @@ const request = (url, page) => {
       return res.json();
     });
 };
-export const searchArtist = (artist, page = 1) => {
-  return request(`http://musicbrainz.org/ws/2/artist?query=${artist}&fmt=json&limit=10`, page)
+export const searchArtist = (artist) => {
+  return request(`http://musicbrainz.org/ws/2/artist?query=${artist}&fmt=json&limit=10`)
     .then(({ artists, count }) => ({
       artists: artists.map(artist => ({ id: artist.id, name: artist.name })),
       allPages: getAllPages(count)
     }));
+};
+
+export const artistInfo = (id) => {
+  return request(`http://musicbrainz.org/ws/2/release?artist=${id}&fmt=json`)
+    .then(json => {
+      const releases = json.release.map(release => ({
+        id: release.id,
+        title: release.title,
+        albumArt: release['cover-art-archive'].front ?
+          `http://coverartarchive.org/release/${release.id}/front-250` :
+          'https://via.placeholder.com/250'
+      }));
+      return {
+        releases,
+        allPages: getAllPages(json['release-count'])
+      };
+    });
 };
