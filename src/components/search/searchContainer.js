@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Search from '../Search';
 import Artists from '../Artists';
+import Releases from '../Releases';
 import { searchArtist } from '../../services/musicAPI';
 import { Paging } from '../../Paging';
 
