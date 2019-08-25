@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Artist from './Artist';
+import './artists.css';
 
 
 function Artists({ artists }) {
   const artistList = artists.map(artist => (
-    <li key={artist.id}>
-      <Artist artist={artist} />
-    </li>
+    <section>
+      <li key={artist.id}>
+        <Artist artist={artist} />
+      </li>
+    </section>
   ));
 
   return (
