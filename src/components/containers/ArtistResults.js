@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Releases from '../components/releases/Releases';
-import { artistInfo } from '../service/musicApi';
+import Releases from '../Releases';
+import { artistInfo } from '../../services/musicAPI';
 // import { withPaging } from '../components/withPaging';
 
 class ArtistResults extends Component {
@@ -37,11 +37,11 @@ class ArtistResults extends Component {
     const { releases } = this.state;
     return (
       <>
-        <h1>Releases for {this.props.match.params.artistName}</h1>
+        <h1>Releases for {this.props.match.params.artist}</h1>
         <Releases releases={releases} />
       </>
     );
   }
 }
 
-export default withPaging(ArtistResults);
+export default ArtistResults;

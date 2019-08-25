@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Release({ id, title, albumArt }) {
+function Release({ id, title, albumArt, release }) {
   return (
     <>
+    <li key={release.id}></li>
       <img src={albumArt} />
       <p>{title}</p>
     </>
@@ -13,7 +14,8 @@ function Release({ id, title, albumArt }) {
 Release.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  albumArt: PropTypes.string.isRequired
+  albumArt: PropTypes.string.isRequired,
+  release: PropTypes.string.isRequired
 };
 
 export default Release;
