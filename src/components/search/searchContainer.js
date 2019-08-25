@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Search from '../Search';
 import Artists from '../Artists';
 import { searchArtist } from '../../services/musicAPI';
+import { Paging } from '../../Paging';
 
 class SearchContainer extends Component {
+  static propTypes = {
+    page: PropTypes.number.isRequired,
+    setAllPages: PropTypes.func.isRequired
+  }
   state = {
     artist: '',
     artists: [],
   };
   
   fetch = () => {
-    searchArtist(this.state.artist)
-      .then(({ artists }) => {
+    searchArtist(this.state.artist, this.props.page)
+      .then(({ artists, allPages }) => {
         this.setState({ artists });
+        this.props.setAllPages(allPages);
       }); 
   }
   changeInput = ({ target }) => {

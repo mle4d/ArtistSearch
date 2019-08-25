@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Search from '../Search';
 import Artists from '../Artists';
 import { searchArtist } from '../../services/musicAPI';
+import { Paging } from '../../Paging';
 
 class Searching extends Component {
   static propTypes = {
